@@ -9,7 +9,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class FileUtil {
-	public static String readFile(String filename){
+	public static String readFileToString(String filename){
 		String result = null;
 		try {
 			File fileDir = new File(filename);
@@ -38,6 +38,36 @@ public class FileUtil {
 			System.out.println(e.getMessage());
 		}
 		return result;
+	}
+	public static ArrayList<String> readFileToList(String filename){
+		ArrayList<String> lines = new ArrayList<String>();
+		try {
+			File fileDir = new File(filename);
+			BufferedReader in = new BufferedReader(
+					new InputStreamReader(
+							new FileInputStream(fileDir), "UTF8"));
+
+			String str;
+
+			while ((str = in.readLine()) != null) {
+				lines.add(str);
+			}
+
+			in.close();
+		} 
+		catch (UnsupportedEncodingException e) 
+		{
+			System.out.println(e.getMessage());
+		} 
+		catch (IOException e) 
+		{
+			System.out.println(e.getMessage());
+		}
+		catch (Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		return lines;
 	}
 	
 	public static ArrayList<String> listFilesForFolder(final String folderName) {

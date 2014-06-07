@@ -8,8 +8,10 @@ public class Main {
 	public static void main(String[] args) {
 //		FileUtil.readFile("corpus/buu_1.html");
 		ArrayList<String> files = FileUtil.listFilesForFolder(CORPUS);
+		ArrayList<String> keywords = FileUtil.readFileToList("keywords/keyword.txt");
+		
 		for (String file : files) {
-			FileUtil.readFile(CORPUS+"/"+file);
+			FileUtil.readFileToString(CORPUS+"/"+file);
 
 		}
 	}

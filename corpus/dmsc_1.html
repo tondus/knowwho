@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link type="text/css" rel="stylesheet" href="dmsc_1_files/style.css"><link href="dmsc_1_files/SpryTabbedPanels.css" rel="stylesheet" type="text/css">
+<script src="dmsc_1_files/SpryTabbedPanels.js" type="text/javascript"></script>
+</head>
+<body background="dmsc_1_files/onetest.JPG">
+
+
+<div class="wrapper">
+        <script type="text/javascript" src="dmsc_1_files/jquery.js"></script>
+<div id="header">
+				<div id="logo"><a href="http://test.dmsc.moph.go.th/dmsc/home.php"><img src="dmsc_1_files/logo250.png" alt="" height="130" width="130"></a>
+                </div>
+                <div class="header_logo_text"><img src="dmsc_1_files/logo_text.png" alt="กรมวิทยาศาสตร์การแพทย์" height="55" width="300"></div>
+                  <div class="change_font_size">
+                  
+                  ปรับขนาดตัวอักษร  &nbsp;<span id="normal_text" class="decreaseFont"><img src="dmsc_1_files/normal-size.png" alt="normal-size"></span> <span id="large_text" class="resetFont"><img src="dmsc_1_files/large-size.png" alt="large-size"></span> <span id="extra_text" class="increaseFont"><img src="dmsc_1_files/extra-size.png" alt="extra-size"></span>
+                  <div class="top_search">
+                  <form action="search_result.php" id="cse-search-box">
+                  	<label class="no-display" for="q">Search</label>
+                    <input style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;http://www.google.co.th/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" name="q" id="q" placeholder="ระบุคำค้น" type="text">
+                    <label for="sa" class="no-display">search</label>
+                    <input src="dmsc_1_files/search.png" name="sa" id="sa" alt="Search" value="Search" type="image">
+                     <input name="cx" value="partner-pub-5090104561081333:6455682980" type="hidden">
+                    <input name="cof" value="FORID:10" type="hidden">
+                    <input name="ie" value="UTF-8" type="hidden">
+                  <input value="test.dmsc.moph.go.th/dmsc/structureCIO.php" name="siteurl" type="hidden"><input name="ref" type="hidden"><input name="ss" type="hidden"></form>
+                  
+                  <script type="text/javascript" src="dmsc_1_files/brand"></script>
+
+                  </div>
+                  </div>
+                  <div class="header_slogan"><!--<marquee behavior="alternate" scrolldelay="10" scrollamount="1">-->เปิดใจ ใฝ่รู้ คู่คุณธรรม นำหลักวิชาการ มาตรฐานสากล<!-- </marquee>--></div>
+              
+</div><!-- header -->
+<script type="text/javascript">
+ $(function(){
+	 	  // Reset Font Size
+		  var originalFontSize = $('html').css('font-size');
+		  $(".resetFont").click(function(){
+		  $('html').css('font-size', originalFontSize);
+		  });
+		  // Increase Font Size
+		  $(".increaseFont").click(function(){
+			var currentFontSize = $('html').css('font-size');
+			var currentFontSizeNum = parseFloat(currentFontSize, 10);
+			var newFontSize = currentFontSizeNum*1.2;
+			if(newFontSize<=24){
+				$('html').css('font-size', newFontSize);
+			}
+			return false;
+		  });
+		  // Decrease Font Size
+		  $(".decreaseFont").click(function(){
+			  
+			var currentFontSize = $('html').css('font-size');
+			var currentFontSizeNum = parseFloat(currentFontSize, 10);
+			var newFontSize = currentFontSizeNum*0.8;
+			if(newFontSize>=8){
+					$('html').css('font-size', newFontSize);
+			}
+			return false;
+		  });
+ });
+</script></div>
+<div id="navmenu">
+	<div class="wrapper">
+		<ul class="dropdown dropdown-horizontal">
+        	<li><a href="http://test.dmsc.moph.go.th/dmsc/home.php">หน้าแรก</a></li>
+            <li class="dir"><a href="#" class="dir">เกี่ยวกับหน่วยงาน</a>
+            			<ul>
+                                                   																<li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=1">ประวัติความเป็นมา</a></li>
+														 																<li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=2">วิสัยทัศน์ &amp; พันธกิจ</a></li>
+														 																<li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=3">ทำเนียบ ผู้บริหาร และนักวิชาการระดับสูง</a></li>
+														 																<li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=4">ภารกิจ และหน้าที่รับผิดชอบของหน่วยงาน</a></li>
+														 																<li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=6">โครงสร้างหน่วยงาน</a></li>
+														                                                         <!-- <li><a href="structure.php">โครงสร้างหน่วยงาน ผู้บริหาร อำนาจหน้าที่</a></li> -->
+                                                         <li><a href="http://test.dmsc.moph.go.th/dmsc/central_agencies.php">ส่วนกลาง</a></li>
+                            							<li><a href="http://test.dmsc.moph.go.th/dmsc/regional_agencies.php">ส่วนภูมิภาค</a></li>
+                            							<li><a href="http://test.dmsc.moph.go.th/dmsc/contact.php">ข้อมูลการติดต่อ </a></li>
+                         </ul>
+            </li>
+
+      
+            <li class="dir">
+            	<a href="#" class="dir">ซีไอโอ</a>
+            	<ul>
+                	<li><a href="http://test.dmsc.moph.go.th/dmsc/cio.php">รายละเอียดเกี่ยวกับซีไอโอ</a></li>
+                    <li><a href="http://test.dmsc.moph.go.th/dmsc/cio_vision.php">วิสัยทัศน์ และนโยบายต่างๆ</a></li>
+                    <li><a href="http://test.dmsc.moph.go.th/dmsc/cio_ict.php">การบริหารงานด้าน ICT</a></li>
+                    <li><a href="http://test.dmsc.moph.go.th/dmsc/cio_news.php">ข่าวสารจากซีไอโอ</a></li>
+                    <li><a href="http://test.dmsc.moph.go.th/dmsc/cio_calendar.php">ปฏิทินกิจกรรมซีไอโอ</a></li>
+                </ul>
+            </li>
+            
+            <li class="dir"><a href="#" class="dir">ยุทธศาสตร์</a>
+            	                 <ul>
+                	                                    	<li><a href="http://test.dmsc.moph.go.th/dmsc/strategic.php?cid=1">แผนยุทธศาสตร์และแผนปฏิบัติราชการ</a></li>
+                                                                                <li><a href="http://dmsc2.dmsc.moph.go.th/webroot/psd/kam.php" target="_blank">คำรับรองการปฏิบัติราชการ</a></li>
+                                                                            	<li><a href="http://test.dmsc.moph.go.th/dmsc/strategic.php?cid=3">การติดตามและประเมินผลการดำเนินการตามแผนงาน</a></li>
+                                                                                <li><a href="http://chpe2k8.dmsc.moph.go.th/smdmsckpi/" target="_blank">ระบบติดตามผลการดำเนินงานตามแผนปฏิบัติราชการ</a></li>
+                                                                            	<li><a href="http://test.dmsc.moph.go.th/dmsc/strategic.php?cid=5">ผลการดำเนินงานตามนโยบายรัฐบาล</a></li>
+                                                                            	<li><a href="http://test.dmsc.moph.go.th/dmsc/strategic.php?cid=6">ประกาศกรม/กฎหมายที่เกี่ยวข้อง</a></li>
+                                                                                <li><a href="http://www.dmsc.moph.go.th/dmsc/upload/strategic/report56.pdf" target="_blank">รายงานประจำปี</a></li>
+                                                        </ul>
+                            </li>
+            
+            <li class="dir">
+            	<a href="#" class="dir">ข่าวประชาสัมพันธ์</a>
+            	<ul>
+                	<li><a href="http://test.dmsc.moph.go.th/dmsc/news.php?cid=2">ข่าวประกาศของหน่วยงาน</a></li>
+                    <li><a href="http://test.dmsc.moph.go.th/dmsc/news.php?cid=1">ข่าวประชาสัมพันธ์ทั่วไป</a></li>
+                    <li><a href="http://test.dmsc.moph.go.th/dmsc/calendar.php">ปฏิทินกิจกรรมของหน่วยงาน</a></li>
+                </ul>
+            </li>
+            <li class="dir"><a href="#" class="dir">คลังความรู้</a>
+            	                 <ul>
+                	                	<li><a href="http://test.dmsc.moph.go.th/dmsc/knowledge.php?cid=1">ผลงานวิจัย</a></li>
+                                    	<li><a href="http://test.dmsc.moph.go.th/dmsc/knowledge.php?cid=2">วารสาร e-Book</a></li>
+                                    </ul>
+                            </li>
+            <li><a href="http://test.dmsc.moph.go.th/dmsc/service.php">งานบริการ</a></li>
+            <li><a href="http://test.dmsc.moph.go.th/dmsc/faq.php">คำถามที่พบบ่อย</a></li>  
+            <li><a href="http://test.dmsc.moph.go.th/dmsc/question.php">ถาม – ตอบ</a></li>        
+        </ul>
+        <div class="clear"></div>
+     </div>
+</div><div class="wrapper">       		
+   
+			<!--ส่วนที่ระบุว่าอยู่หน้าไหน -->  
+						<div class="breadcrump">
+            			<ul>
+                    		<li> <strong><a href="http://test.dmsc.moph.go.th/dmsc/home.php"><img src="dmsc_1_files/home_icon.png" alt="home" border="0"> หน้าแรก</a><span>»</span><a href="http://www.dmsc.moph.go.th/dmsc/history.php?id=3" target="_blank">บุคลากร ข้าราชการ</a> <span>»</span>ผู้บริหาร ทรงคุณวุฒิ  เชี่ยวชาญ</strong></li>
+                    		<li></li>
+					   </ul>
+                    <div class="clear"></div>
+  </div><!-- Breadcrump -->
+			<!--ส่วนที่ระบุว่าอยู่หน้าไหน -->
+
+  <div class="content pad12">
+           
+		   <!------ ส่วนส่วนของเนื้อหาในเว็บไซต์ ----------->
+
+	<style type="text/css">
+#form1 table tr td {
+	color: #00F;
+}
+#form1 table {
+	color: #999;
+}
+#form1 table {
+	color: #FFF;
+}
+#form1 table tbody tr td div {
+	color: #FFF;
+}
+</style>
+<form id="form1" name="form1" method="post" action="">
+  <div align="center">
+    <table cellpadding="5" cellspacing="10" width="102%">
+      <tbody>
+        <tr bgcolor="#0033ff">
+          <td colspan="3" bgcolor="#FFFFFF"><div>
+            <p align="left"><img src="dmsc_1_files/a_004.jpg" height="85" width="346"></p>
+</div>
+            <div align="center"></div></td>
+          </tr>
+        <tr>
+          <td></td>
+          <td style="text-align: center; font-size: 1.5em; color: #FFF;" bgcolor="#0066CC">อธิบดีกรมวิทยาศาสตร์การแพทย์</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td width="311"></td>
+          <td width="385"><div align="center">
+            <p><img src="dmsc_1_files/_035.jpg" height="208" width="141"></p>
+            <p><img src="dmsc_1_files/apichai.jpg" alt="" height="83" width="312"></p>
+          </div></td>
+          <td width="303"></td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-size: 1.5em; color: #FFF;" bgcolor="#0066CC">รองอธิบดีกรมวิทยาศาสตร์การแพทย์</td>
+          <td style="text-align: center; font-size: 1.5em; color: #FFF;" bgcolor="#0066CC">รองอธิบดีกรมวิทยาศาสตร์การแพทย์</td>
+          <td style="text-align: center; font-size: 1.5em; color: #FFF;" bgcolor="#0066CC">รองอธิบดีกรมวิทยาศาสตร์การแพทย์</td>
+        </tr>
+        <tr>
+          <td><p align="center"><img src="dmsc_1_files/_013.jpg" height="210" width="148"></p>            </td>
+          <td><p align="center"><img src="dmsc_1_files/_002.JPG" height="210" width="140"></p>            </td>
+          <td><div align="center"><img src="dmsc_1_files/wanchai.png" alt="" height="210" width="147"></div></td>
+          </tr>
+        <tr>
+          <td><div align="center"><img src="dmsc_1_files/jureeporn.jpg" alt="" height="83" width="312"></div></td>
+          <td><p align="center"><img src="dmsc_1_files/varunee.jpg" alt="" height="83" width="312"></p></td>
+          <td><div align="center"><img src="dmsc_1_files/wanchai.jpg" alt="" height="83" width="312"></div></td>
+          </tr>
+        <tr bgcolor="#0033ff">
+          <td colspan="3" bgcolor="#FFFFFF"><p>&nbsp;</p>
+            <p align="left"><img src="dmsc_1_files/a_007.jpg" height="85" width="346"></p>
+            <table border="0" width="1022">
+              <tbody><tr>
+                <td width="554"><div align="left"><img src="dmsc_1_files/_008.jpg" align="middle" height="158" width="120"><img src="dmsc_1_files/a_003.jpg" align="middle" height="158" width="327"></div></td>
+                <td width="458"><img src="dmsc_1_files/_016.jpg" height="158" width="118"><img src="dmsc_1_files/_023.jpg" height="158" width="327"></td>
+                </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/_001.JPG" height="158" width="122"><img src="dmsc_1_files/_025.jpg" height="158" width="327"></div></td>
+                <td><img src="dmsc_1_files/a_002.jpg" height="158" width="119"><img src="dmsc_1_files/a_011.jpg" height="158" width="327"></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/_002.txt" height="158" width="119"><img src="dmsc_1_files/_020.jpg" height="158" width="327"></div></td>
+                <td><img src="dmsc_1_files/33_111.gif" height="158" width="122"><img src="dmsc_1_files/_003.txt" height="158" width="327"></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/33_111.gif" height="158" width="120"><img src="dmsc_1_files/_004.jpg" height="158" width="327"></div></td>
+                <td><img src="dmsc_1_files/33_111.gif" height="158" width="120"><img src="dmsc_1_files/_030.jpg" height="158" width="327"></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_005.jpg" height="85" width="346"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_026.jpg" height="158" width="327"></div></td>
+                <td><img src="dmsc_1_files/_009.jpg" height="158" width="123"><img src="dmsc_1_files/_032.jpg" height="158" width="327"></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_021.jpg" height="158" width="327"></div></td>
+                <td><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_012.jpg" height="158" width="327"></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_018.jpg" height="158" width="327"></div></td>
+                <td><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_019.jpg" height="158" width="327"></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/_029.jpg" height="158" width="122"><img src="dmsc_1_files/_024.jpg" height="158" width="327"></div></td>
+                <td><img src="dmsc_1_files/_034.jpg" height="158" width="121"><img src="dmsc_1_files/a_012.jpg" height="158" width="327"></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/_027.jpg" height="158" width="120"><img src="dmsc_1_files/a.jpg" height="158" width="327"></div></td>
+                <td><img src="dmsc_1_files/_001.txt" height="158" width="120"><img src="dmsc_1_files/a_008.jpg" height="158" width="327"></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_037.jpg" height="158" width="327"></div></td>
+                <td><div align="left"><img src="dmsc_1_files/_006.jpg" height="158" width="120"><img src="dmsc_1_files/_017.jpg" height="158" width="327"></div></td>
+              </tr>
+              <tr>
+                <td height="166"><div align="left"><img src="dmsc_1_files/_022.jpg" height="158" width="120"><img src="dmsc_1_files/_031.jpg" height="158" width="327"></div></td>
+                <td><div align="left"><img src="dmsc_1_files/_003.jpg" height="158" width="120"><img src="dmsc_1_files/_015.jpg" height="158" width="327"></div></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_005.jpg" height="158" width="327"></div></td>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_028.jpg" height="158" width="327"></div></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_036.jpg" height="158" width="327"></div></td>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_002.jpg" height="158" width="327"></div></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_010.jpg" height="158" width="327"></div></td>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_007.jpg" height="158" width="327"></div></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_014.jpg" height="158" width="327"></div></td>
+                <td><div align="left"><img src="dmsc_1_files/a_009.jpg" height="158" width="114"><img src="dmsc_1_files/_033.jpg" height="158" width="327"></div></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_011.jpg" height="158" width="327"></div></td>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/a_010.jpg" alt="" height="158" width="327"></div></td>
+              </tr>
+              <tr>
+                <td><div align="left"><img src="dmsc_1_files/a_006.jpg" height="159" width="120"><img src="dmsc_1_files/_001.jpg" height="158" width="327"></div></td>
+                <td><div align="left"></div></td>
+              </tr>
+        </tbody></table>
+            <p>&nbsp;</p></td>
+          </tr>
+        <tr>
+          <td colspan="3" bgcolor="#0000CC"><div align="center">*แจ้ง Update /แก้ไข ข้อมูล เพิ่มเติ่ม E-mail kanokphich.j@dmsc.mail.go.th หรือ ติดต่อ ศทส. โทร. 99427 </div></td>
+        </tr>
+        <tr>
+          <td colspan="3"><div align="right"></div>
+<div align="center"></div>
+            <div align="center"><span _mce_style="font-size: x-small;"><span _mce_style="font-size: small;"><span _mce_style="font-size: small;"><span _mce_style="font-size: x-small;"><span _mce_style="font-size: small;"><span _mce_style="font-size: small;"> </span></span></span></span></span></span></div>            <div align="center"><span _mce_style="font-size: x-small;"><span _mce_style="font-size: small;"><span _mce_style="font-size: small;"><span _mce_style="font-size: x-small;"><span _mce_style="font-size: small;"> </span></span></span></span></span></div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+        </tbody>
+    </table>
+    <br>
+  </div>
+</form>
+
+
+		   <!------ ส่วนส่วนของเนื้อหาในเว็บไซต์ --->
+
+            </div>
+  <div align="right"></div>
+</div><!-- right Column -->
+<div class="clear"></div>
+        <!-- Content -->	
+   
+<!-- wrapper -->
+<div class="wrapper">
+  <div align="right"></div>
+</div>
+<!-- right Column -->
+<div class="clear"></div>
+
+<!-- Content -->
+
+<div id="open_close_info"><img src="dmsc_1_files/open_close_button.png" alt="open_close_button"></div>
+<div id="footer_top">
+   <div class="wrapper">
+				
+                <div class="content">
+                <div class="footer_block">
+                    <div class="footer_topic">หน้าแรก</div> 
+					<ul>                   
+                    	<li><a href="http://test.dmsc.moph.go.th/dmsc/banner.php">ระบบสารสนเทศ</a></li>
+                        <li><a href="http://test.dmsc.moph.go.th/dmsc/law.php">กฏหมายและข้อบังคับที่เกี่ยวข้อง</a></li>
+                        <li><a href="http://test.dmsc.moph.go.th/dmsc/download.php">ดาวน์โหลดแบบฟอร์ม</a></li>
+                        <li>
+                            <a href="http://test.dmsc.moph.go.th/dmsc/link.php">Web Link</a>
+                            <ul>
+                                                         <li><a href="http://test.dmsc.moph.go.th/dmsc/banner.php?id=1">ระบบสารสนเทศ</a></li>
+                                                        <li><a href="http://test.dmsc.moph.go.th/dmsc/banner.php?id=2">หน่วยงานภายในกระทรวงสาธารณสุข</a></li>
+                                                        <li><a href="http://test.dmsc.moph.go.th/dmsc/banner.php?id=3">ลิงค์ที่น่าสนใจ</a></li>
+                                                        <li><a href="http://test.dmsc.moph.go.th/dmsc/banner.php?id=4">การจัดการความรู้ (KM)</a></li>
+                                                        <li><a href="http://test.dmsc.moph.go.th/dmsc/banner.php?id=5">เครือข่าย DMSC</a></li>
+                                                        </ul>
+                        </li>
+				   </ul>
+                </div><!-- footer block -->
+                
+                	<div class="footer_block">
+                    <div class="footer_topic">เกี่ยวกับหน่วยงาน</div> 
+					<ul>
+                                                <li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=1">ประวัติความเป็นมา</a></li>
+                                                 <li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=2">วิสัยทัศน์ &amp; พันธกิจ</a></li>
+                                                 <li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=3">ทำเนียบ ผู้บริหาร และนักวิชาการระดับสูง</a></li>
+                                                 <li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=4">ภารกิจ และหน้าที่รับผิดชอบของหน่วยงาน</a></li>
+                                                 <li><a href="http://test.dmsc.moph.go.th/dmsc/history.php?id=6">โครงสร้างหน่วยงาน</a></li>
+                                         		<!-- <li><a href="structure.php">โครงสร้างหน่วยงาน ผู้บริหาร อำนาจหน้าที่</a></li> -->
+                            <li><a href="http://test.dmsc.moph.go.th/dmsc/central_agencies.php">ส่วนกลาง</a></li>
+                            <li><a href="http://test.dmsc.moph.go.th/dmsc/regional_agencies.php">ส่วนภูมิภาค</a></li>
+                            <li><a href="http://test.dmsc.moph.go.th/dmsc/contact.php">ข้อมูลการติดต่อ</a> </li>
+				   </ul>
+                </div><!-- footer block -->
+                
+                <div class="footer_block">
+                    <div class="footer_topic">ซีไอโอ</div> 
+					<ul>
+                        <li><a href="http://test.dmsc.moph.go.th/dmsc/cio.php">รายละเอียดเกี่ยวกับซีไอโอ</a></li>
+                        <li><a href="http://test.dmsc.moph.go.th/dmsc/cio_vision.php">วิสัยทัศน์ และนโยบายต่างๆ</a></li>
+                        <li><a href="http://test.dmsc.moph.go.th/dmsc/cio_ict.php">การบริหารงานด้าน ICT</a></li>
+                        <li><a href="http://test.dmsc.moph.go.th/dmsc/cio_news.php">ข่าวสารจากซีไอโอ</a></li>
+                        <li><a href="http://test.dmsc.moph.go.th/dmsc/cio_calendar.php">ปฏิทินกิจกรรมซีไอโอ</a></li>
+				   </ul>
+                </div><!-- footer block -->
+                
+                <div class="footer_block">
+                    <div class="footer_topic">ยุทธศาสตร์ แผนปฏิบัติราชการ</div> 
+					<ul>
+                                                                           <li><a href="http://test.dmsc.moph.go.th/dmsc/strategic.php?cid=1">แผนยุทธศาสตร์และแผนปฏิบัติราชการ</a></li>
+                                                                                                            <li><a href="http://dmsc2.dmsc.moph.go.th/webroot/psd/kam.php" target="_blank">คำรับรองการปฏิบัติราชการ</a></li>
+                                                                                                            <li><a href="http://test.dmsc.moph.go.th/dmsc/strategic.php?cid=3">การติดตามและประเมินผลการดำเนินการตามแผนงาน</a></li>
+                                                                                                            <li><a href="http://chpe2k8.dmsc.moph.go.th/smdmsckpi/" target="_blank">ระบบติดตามผลการดำเนินงานตามแผนปฏิบัติราชการ</a></li>
+                                                                                                            <li><a href="http://test.dmsc.moph.go.th/dmsc/strategic.php?cid=5">ผลการดำเนินงานตามนโยบายรัฐบาล</a></li>
+                                                                                                            <li><a href="http://test.dmsc.moph.go.th/dmsc/strategic.php?cid=6">ประกาศกรม/กฎหมายที่เกี่ยวข้อง</a></li>
+                                                                                                            <li><a href="http://www.dmsc.moph.go.th/dmsc/upload/strategic/report56.pdf" target="_blank">รายงานประจำปี</a></li>
+                                                      
+				   </ul>
+                </div><!-- footer block -->
+                
+                 <div class="footer_block">
+                    <div class="footer_topic">ข่าวประชาสัมพันธ์</div> 
+					<ul>
+                   <li><a href="http://test.dmsc.moph.go.th/dmsc/news.php?cid=2">ข่าวประกาศของหน่วยงาน</a></li>
+                    <li><a href="http://test.dmsc.moph.go.th/dmsc/news.php?cid=1">ข่าวประชาสัมพันธ์ทั่วไป</a></li>
+                    <li><a href="http://test.dmsc.moph.go.th/dmsc/calendar.php">ปฏิทินกิจกรรมของหน่วยงาน</a></li>
+				   </ul>
+                </div><!-- footer block -->
+                
+                <div class="footer_block">
+                    <div class="footer_topic"><a href="http://test.dmsc.moph.go.th/dmsc/service.php" style="color:#305387;">งานบริการ</a></div> 
+                    <div class="footer_topic"><a href="http://test.dmsc.moph.go.th/dmsc/sitemap.php" style="color:#305387;">ผังเว็บไซต์</a></div>
+                </div><!-- footer block -->
+                     
+                <div class="clear"></div>
+                </div><!-- content -->
+  </div>
+</div><!-- footer top -->
+
+<div id="footer">
+		<div class="wrapper">
+        กรมวิทยาศาสตร์การแพทย์ กระทรวงสาธารณสุข  <br>
+88/7 บำราศนราดูร ถ.ติวานนท์ ต.ตลาดขวัญ  อ.เมือง จ.นนทบุรี 11000  
+โทรศัพท์. 0-2951-0000, 0-2589-9850-8  โทรสาร. 0-2591-5974, 0-2591-5449  
+E-mail: prdmsc@dmsc.mail.go.th
+
+        
+		</div>
+</div><!-- Footer -->
+<div class="gototop"><a href="#header"><img src="dmsc_1_files/gototop.png" alt="top" border="0"></a></div>
+
+<script type="text/javascript">
+		$("#open_close_info").click(function(){
+				$("#footer_top").slideToggle(300)
+		});
+</script>
+
+</body></html>

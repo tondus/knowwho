@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class FileUtil {
 	public static String readFileToString(String filename){
-		String result = null;
+		String result = "";
 		try {
 			File fileDir = new File(filename);
 			BufferedReader in = new BufferedReader(
@@ -20,7 +20,8 @@ public class FileUtil {
 			String str;
 
 			while ((str = in.readLine()) != null) {
-				System.out.println(str);
+//				System.out.println(str);
+				result += str+"\n";
 			}
 
 			in.close();

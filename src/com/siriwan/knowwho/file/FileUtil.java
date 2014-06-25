@@ -1,8 +1,10 @@
-package com.siriwan.knowwho;
+package com.siriwan.knowwho.file;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -20,7 +22,7 @@ public class FileUtil {
 			String str;
 
 			while ((str = in.readLine()) != null) {
-//				System.out.println(str);
+				//				System.out.println(str);
 				result += str+"\n";
 			}
 
@@ -40,6 +42,30 @@ public class FileUtil {
 		}
 		return result;
 	}
+
+	public static String readFileAsString(String filePath) {
+		StringBuffer fileData = new StringBuffer();
+		try {
+			
+			BufferedReader reader = new BufferedReader(new FileReader(filePath));
+			char[] buf = new char[1024];
+			int numRead=0;
+			while((numRead=reader.read(buf)) != -1){
+				String readData = String.valueOf(buf, 0, numRead);
+				fileData.append(readData);
+			}
+			reader.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return fileData.toString();
+	}
+
 	public static ArrayList<String> readFileToList(String filename){
 		ArrayList<String> lines = new ArrayList<String>();
 		try {
@@ -70,17 +96,17 @@ public class FileUtil {
 		}
 		return lines;
 	}
-	
+
 	public static ArrayList<String> listFilesForFolder(final String folderName) {
-	    ArrayList<String> files = new ArrayList<String>();
+		ArrayList<String> files = new ArrayList<String>();
 		File  folder= new File(folderName);
 		for (final File fileEntry : folder.listFiles()) {
-	        if (fileEntry.isDirectory()) {
-	            listFilesForFolder(fileEntry.getName());
-	        } else {
-	            files.add(fileEntry.getName());
-	        }
-	    }
+			if (fileEntry.isDirectory()) {
+				listFilesForFolder(fileEntry.getName());
+			} else {
+				files.add(fileEntry.getName());
+			}
+		}
 		return files;
 	}
 

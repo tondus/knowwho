@@ -43,6 +43,26 @@ public class ACMSearch {
 		return this.concepts.size();
 	}
 	
+	public void getAllLeafNode(){
+		Iterator<String> conceptId = this.concepts.getConcepts().keySet().iterator();
+		while (conceptId.hasNext()) {
+			String id = (String) conceptId.next();
+			Concept concept = this.concepts.getConcept(id);
+			if(concept.isLeafNode()){
+				System.out.println("Leaf Node = "+concept.getId());
+			}
+		}
+	}
+	public void getAllRootNode(){
+		Iterator<String> conceptId = this.concepts.getConcepts().keySet().iterator();
+		while (conceptId.hasNext()) {
+			String id = (String) conceptId.next();
+			Concept concept = this.concepts.getConcept(id);
+			if(concept.isRoot()){
+				System.out.println("Root Node = "+concept.getId());
+			}
+		}
+	}
 	private Concepts loadACMModel(){
 		String xml = FileUtil.readFileAsString(ACM);
 		System.out.println("-----------Load file finish-----------");

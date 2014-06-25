@@ -10,7 +10,8 @@ public class Concept {
 	private ArrayList<Label> labels = new ArrayList<Label>();
 	private ArrayList<String> child = new ArrayList<String>();
 	private ArrayList<String> related = new ArrayList<String>();
-	
+	private boolean isLeafNode;
+	private boolean isRoot;
 	public String getId() {
 		return id;
 	}
@@ -53,5 +54,12 @@ public class Concept {
 		if(!this.related.contains(related)){
 			this.related.add(related);
 		}
+	}
+	public boolean isLeafNode() {
+		return (this.child.size() == 0) ? true:false;
+	}
+	
+	public boolean isRoot() {
+		return (this.parent == null)?true:false;
 	}
 }

@@ -31,6 +31,9 @@ public class Main {
 	public static void main(String[] args) {
 		ACMSearch acm = new ACMSearch();
 		acm.search("Data cleaning");
+		acm.getAllLeafNode();
+		acm.getAllRootNode();
 	}
+	
 
 }

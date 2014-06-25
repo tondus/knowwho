@@ -1,6 +1,7 @@
 package com.siriwan.knowwho.dao;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class Concepts {
 	private HashMap<String, Concept> concepts = new HashMap<String, Concept>();
@@ -12,7 +13,7 @@ public class Concepts {
 			return null;
 		}
 	}
-
+	
 	public void addConcepts(Concept c) {
 		if(!this.concepts.containsKey(c.getId())){
 			this.concepts.put(c.getId(), c);

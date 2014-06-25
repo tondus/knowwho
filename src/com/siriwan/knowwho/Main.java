@@ -13,23 +13,6 @@ import javax.management.modelmbean.XMLParseException;
 import net.htmlparser.jericho.Element;
 
 import org.jdom.Attribute;
-import org.semanticweb.owlapi.model.OWLObjectProperty;
-import org.semanticweb.owlapi.model.OWLObjectPropertyExpression;
-import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.skos.SKOSAnnotation;
-import org.semanticweb.skos.SKOSConcept;
-import org.semanticweb.skos.SKOSCreationException;
-import org.semanticweb.skos.SKOSDataFactory;
-import org.semanticweb.skos.SKOSDataRelationAssertion;
-import org.semanticweb.skos.SKOSDataset;
-import org.semanticweb.skos.SKOSEntity;
-import org.semanticweb.skos.SKOSLiteral;
-import org.semanticweb.skos.SKOSObjectProperty;
-import org.semanticweb.skos.SKOSObjectRelationAssertion;
-import org.semanticweb.skos.SKOSTypedLiteral;
-import org.semanticweb.skos.SKOSUntypedLiteral;
-import org.semanticweb.skosapibinding.SKOSManager;
-import org.semanticweb.skosapibinding.SKOStoOWLConverter;
 
 import com.siriwan.knowwho.dao.Concept;
 import com.siriwan.knowwho.dao.Concepts;

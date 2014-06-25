@@ -20,7 +20,9 @@ public class ACMSearch {
 		this.concepts = loadACMModel();
 		System.out.println("Total Concept = "+this.getConceptCount()+" concepts.");
 	}
-	
+	public Concept getConcept(String conceptId){
+		return this.concepts.getConcept(conceptId);
+	}
 	public ArrayList<Concept> search(String query){
 		ArrayList<Concept> result = new ArrayList<Concept>();
 		Iterator<String> it = this.concepts.getConcepts().keySet().iterator();

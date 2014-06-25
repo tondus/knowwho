@@ -5,6 +5,7 @@ import java.util.List;
 
 import net.htmlparser.jericho.Element;
 
+import com.siriwan.knowwho.download.HttpDownloadUtility;
 import com.siriwan.knowwho.file.FileUtil;
 
 
@@ -29,10 +30,14 @@ public class Main {
 
 	
 	public static void main(String[] args) {
-		ACMSearch acm = new ACMSearch();
+		/*ACMSearch acm = new ACMSearch();
 		acm.search("Data cleaning");
 		acm.getAllLeafNode();
-		acm.getAllRootNode();
+		acm.getAllRootNode();*/
+		String url = "http://dl.acm.org/results.cfm?query=Owner%3AGUIDE%28CCS%3AArtificial%20CCS%3Aintelligence%20%29&querydisp=Owner%3AGUIDE%28CCS%3AArtificial%20CCS%3Aintelligence%20%29&source_query=&start=1&srt=score%20dsc&short=0&source_disp=&since_month=&since_year=&before_month=&before_year=&coll=DL&dl=GUIDE&termshow=matchboolean&range_query=&zadv=1&CFID=485514724&CFTOKEN=54595634";
+		String url2 = "http://dl.acm.org/results.cfm?query=Owner%3AGUIDE%28CCS%3AArtificial%20CCS%3Aintelligence%20%29&querydisp=Owner%3AGUIDE%28CCS%3AArtificial%20CCS%3Aintelligence%20%29&source_query=&start=1&srt=score%20dsc&short=0&source_disp=&since_month=&since_year=&before_month=&before_year=&coll=DL&dl=GUIDE&termshow=matchboolean&range_query=&zadv=1";
+		String url3 = "http://www.google.com";
+		HttpDownloadUtility.downloadHTML(url2);
 	}
 	
 

@@ -18,6 +18,16 @@ public class Concept {
 	public void setId(String id) {
 		this.id = id;
 	}
+	public Label getPrefLabel(){
+		Label prefLabel = null;
+		ArrayList<Label> labels = this.getLabels();
+		for (Label label : labels) {
+			if(label.isPrefLabel()){
+				prefLabel = label;
+			}
+		}
+		return prefLabel;
+	}
 	public String getLang() {
 		return lang;
 	}

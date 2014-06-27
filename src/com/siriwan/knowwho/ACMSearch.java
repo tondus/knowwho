@@ -23,6 +23,11 @@ public class ACMSearch {
 	public Concept getConcept(String conceptId){
 		return this.concepts.getConcept(conceptId);
 	}
+	
+	public Concepts getAllConcepts(){
+		return this.concepts;
+	}
+	
 	public ArrayList<Concept> search(String query){
 		ArrayList<Concept> result = new ArrayList<Concept>();
 		Iterator<String> it = this.concepts.getConcepts().keySet().iterator();

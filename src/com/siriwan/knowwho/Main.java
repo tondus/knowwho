@@ -1,5 +1,11 @@
 package com.siriwan.knowwho;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,17 +36,37 @@ public class Main {
 		}
 	}
 
-	
-	public static void main(String[] args) {
-		ACMSearch acm = new ACMSearch();
-		acm.search("Data cleaning");
-		Concepts concepts = acm.getAllConcepts();
-		ArrayList<Concept> list = concepts.getAllConcepts();
-		for (Concept concept : list) {
-			System.out.println(concept.getPrefLabel().getValue());
-			
+	public static void testEncoding(){
+		
+		
+		try {
+			String outputfile = "files/test.txt";
+		String encoding = "UTF8";
+		Writer bfw = new OutputStreamWriter(new FileOutputStream(outputfile+ ".tag"), encoding);
+		bfw.write("str");
+		bfw.close();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-//		acm.getAllLeafNode();
+		
+	}
+	public static void main(String[] args) {
+		Main.testEncoding();
+//		ACMSearch acm = new ACMSearch();
+//		acm.search("Data cleaning");
+//		Concepts concepts = acm.getAllConcepts();
+//		ArrayList<Concept> list = concepts.getAllConcepts();
+//		for (Concept concept : list) {
+//			System.out.println(concept.getPrefLabel().getValue());
+//		}
+////		acm.getAllLeafNode();
 //		acm.getAllRootNode();
 /*		String url = "http://dl.acm.org/results.cfm?query=Owner%3AGUIDE%28CCS%3AArtificial%20CCS%3Aintelligence%20%29&querydisp=Owner%3AGUIDE%28CCS%3AArtificial%20CCS%3Aintelligence%20%29&source_query=&start=1&srt=score%20dsc&short=0&source_disp=&since_month=&since_year=&before_month=&before_year=&coll=DL&dl=GUIDE&termshow=matchboolean&range_query=&zadv=1&CFID=485514724&CFTOKEN=54595634";
 		String url2 = "http://dl.acm.org/results.cfm?query=Owner%3AGUIDE%28CCS%3AArtificial%20CCS%3Aintelligence%20%29&querydisp=Owner%3AGUIDE%28CCS%3AArtificial%20CCS%3Aintelligence%20%29&source_query=&start=1&srt=score%20dsc&short=0&source_disp=&since_month=&since_year=&before_month=&before_year=&coll=DL&dl=GUIDE&termshow=matchboolean&range_query=&zadv=1";

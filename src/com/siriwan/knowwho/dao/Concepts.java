@@ -14,6 +14,7 @@ public class Concepts {
 			return null;
 		}
 	}
+	
 	public ArrayList<Concept> getAllConcepts(){
 		ArrayList<Concept> concepts = new ArrayList<Concept>();
 		Iterator<String> it = this.concepts.keySet().iterator();
@@ -23,6 +24,7 @@ public class Concepts {
 		}
 		return concepts;
 	}
+	
 	public void addConcepts(Concept c) {
 		if(!this.concepts.containsKey(c.getId())){
 			this.concepts.put(c.getId(), c);

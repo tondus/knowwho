@@ -15,6 +15,7 @@ import com.siriwan.knowwho.dao.Concept;
 import com.siriwan.knowwho.dao.Concepts;
 import com.siriwan.knowwho.download.HttpDownloadUtility;
 import com.siriwan.knowwho.file.FileUtil;
+import com.siriwan.knowwho.file.WordCounter;
 
 
 public class Main {
@@ -58,7 +59,7 @@ public class Main {
 		
 	}
 	public static void main(String[] args) {
-		Main.testEncoding();
+		WordCounter counter = new WordCounter("files/test1.out.ml", "files/systems_security.txt.tag.out");
 //		ACMSearch acm = new ACMSearch();
 //		acm.search("Data cleaning");
 //		Concepts concepts = acm.getAllConcepts();

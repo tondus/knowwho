@@ -98,20 +98,27 @@ public class FileUtil {
 		return lines;
 	}
 	
-	public static HashMap<String,String> readFileToHashMapWithLowerCase(String filename){
-		HashMap<String, String> words = new HashMap<String, String>();
+	public static HashMap<String,Integer> readFileToHashMapWithLowerCase(String filename){
+		HashMap<String, Integer> words = new HashMap<String, Integer>();
 		try {
 			File fileDir = new File(filename);
 			BufferedReader in = new BufferedReader(
 					new InputStreamReader(
 							new FileInputStream(fileDir), "UTF8"));
 
-			String str;
+			String line;
 
-			while ((str = in.readLine()) != null) {
-				if(!words.containsKey(str.toLowerCase())){
-					words.put(str, str);
+			while ((line = in.readLine()) != null) {
+				String[] list = line.split("\\t|\\|");
+				for (String str : list) {
+					str = str.toLowerCase().trim();
+					if(!words.containsKey(str)){
+						words.put(str, 1);
+					}else{
+						words.put(str, words.get(str)+1);
+					}
 				}
+				
 			}
 
 			in.close();

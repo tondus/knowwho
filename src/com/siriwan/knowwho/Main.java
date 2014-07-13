@@ -59,7 +59,7 @@ public class Main {
 		
 	}
 	public static void main(String[] args) {
-		WordCounter counter = new WordCounter("files/test1.out.ml", "files/systems_security.txt.tag.out");
+		WordCounter.printStat("files/test1.out.ml", "files/systems_security.txt.tag.out");
 //		ACMSearch acm = new ACMSearch();
 //		acm.search("Data cleaning");
 //		Concepts concepts = acm.getAllConcepts();

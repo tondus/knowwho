@@ -109,7 +109,7 @@ public class FileUtil {
 			String line;
 
 			while ((line = in.readLine()) != null) {
-				String[] list = line.split("\\t|\\|");
+				String[] list = line.split("\\t");
 				for (String str : list) {
 					str = str.toLowerCase().trim();
 					if(!words.containsKey(str)){
